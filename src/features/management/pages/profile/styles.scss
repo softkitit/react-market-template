@@ -1,0 +1,118 @@
+@import '/src/styles.scss';
+@import '/src/theme.scss';
+@import '/src/assets/styles/mixins';
+
+.active-link {
+    @include font-medium();
+    @include media-breakpoint-lg {
+        color: #333 !important;
+        border-bottom: 3px solid $link-primary;
+        padding-bottom: 1rem;
+    }
+}
+
+.page-navigation {
+    padding-top: 5rem;
+    @include media-breakpoint-md {
+        padding-top: 3rem;
+    }
+}
+
+ul.list-unstyled {
+    @include media-breakpoint-lg {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+    }
+
+    li {
+        padding: 1rem 0;
+        @include media-breakpoint-md {
+            padding: 0;
+        }
+
+        @include media-breakpoint-lg {
+            padding: 0;
+            margin-right: 4rem;
+            margin-bottom: 2rem;
+        }
+
+        span {
+            color: inherit;
+            cursor: pointer;
+            @include font-size-md();
+            @include media-breakpoint-md {
+                @include font-medium();
+                color: #999;
+            }
+        }
+    }
+}
+
+.breadcrumbs-wrapper {
+    display: flex;
+    align-items: center;
+
+    .breadcrumbs-icon {
+        padding-bottom: 1px;
+    }
+}
+
+.page-title {
+    line-height: 40px;
+    margin-bottom: 0;
+    @include media-breakpoint-md {
+        font-size: 24px;
+        line-height: 36px;
+    }
+}
+
+.header-padding {
+    @include media-breakpoint-md {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}
+
+.billing-history {
+    .app-grid-table__header__cell {
+        span {
+            font-size: 14px;
+        }
+        .oc-table__icon {
+            &-down {
+                width: 12px;
+                transform: rotate(180deg);
+            }
+            &-up {
+                width: 12px;
+            }
+        }
+    }
+
+    .app-grid-table__row__cell {
+        &-app-options-dropdown {
+            .dropdown-button {
+                padding-right: 3rem;
+            }
+            .dropdown-menu .dropdown-item {
+                padding: 14px 16px;
+            }
+        }
+        &-name-content-text-title {
+            margin-bottom: 0;
+        }
+        span {
+            font-size: 14px;
+        }
+        .status-row,
+        .date-row {
+            color: $secondary;
+        }
+
+        .amount-row {
+            color: $primary;
+            @include font-medium();
+        }
+    }
+}

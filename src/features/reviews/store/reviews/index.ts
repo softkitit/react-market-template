@@ -1,0 +1,1 @@
+export { reviewsReducer } from './reducer';

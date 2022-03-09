@@ -1,0 +1,42 @@
+@import '/src/styles.scss';
+@import '/src/theme.scss';
+@import '/src/assets/styles/mixins';
+
+.my-apps {
+  .infinite-scroll-component {
+    overflow-x: hidden !important;
+  }
+
+  .dropdown-menu {
+    width: auto;
+    min-width: 10rem;
+  }
+
+  .menu-button {
+    width: 52px;
+    min-width: 52px;
+    height: 42px;
+    padding: 0;
+
+    @include media-breakpoint-sm {
+      display: block;
+      height: 20px;
+    }
+
+    &:not(.disabled):hover {
+      background-color: unset;
+    }
+
+    &:not(.disabled):active {
+      background-color: unset;
+    }
+
+    &.dropdown-toggle {
+      background-color: unset;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+}

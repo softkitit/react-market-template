@@ -1,0 +1,220 @@
+// @import '/src/styles.scss';
+@import '/src/theme.scss';
+@import '/src/assets/styles/mixins';
+
+.app-detail {
+  &__back-link {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 0;
+    @include media-breakpoint-md {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+
+    &-text {
+      @include font-medium();
+      @include font-size-md();
+    }
+  }
+
+  &__data {
+    display: flex;
+    margin-bottom: 1rem;
+    @include media-breakpoint-lg {
+      flex-direction: column;
+    }
+    &-description {
+      display: flex;
+      flex-grow: 1;
+      padding-right: 2rem;
+      @include media-breakpoint-md {
+        padding-right: 0;
+      }
+      @include media-breakpoint-sm {
+        flex-direction: column;
+        img {
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+      .app-logo {
+        padding-left: 0;
+        @include media-breakpoint-sm {
+          padding-right: 0;
+        }
+      }
+      ul.categories {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        padding: 0;
+        list-style: none;
+        li.categories__item {
+          position: relative;
+          margin-right: 16px;
+          font-size: 14px;
+          line-height: 16px;
+          cursor: pointer;
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -8px;
+            transform: translate(-50%,-50%);
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #c9d5ea;
+            cursor: auto;
+            pointer-events: none;
+          }
+          a {
+            @include font-size-md();
+            line-height: 16px;
+            color: #333;
+          }
+        }
+      }
+      .text-secondary {
+        word-break: break-word;
+      }
+    }
+    &-support {
+      &-title {
+        font-size: 24px;
+      }
+    }
+    .medium {
+      @include font-medium();
+    }
+  }
+
+  &__video {
+    max-width: 380px;
+    width: 100%;
+    flex-shrink: 0;
+    @include media-breakpoint-lg {
+      max-width: 100%;
+    }
+    .oc-video {
+      height: 100%;
+      &__container,
+      &__preview {
+          height: 100%;
+      }
+      &_frame-video {
+        @media (min-width: 991.99px) {
+          height: 100% !important;
+        }
+      }
+      &__preview-data {
+        @include media-breakpoint-lg {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__price {
+    @include font-medium();
+    color: $link-primary;
+  }
+}
+
+.description {
+  width: 100%;
+}
+
+.list-group.list-group-flush {
+  .list-group-item {
+    @include font-medium();
+    padding: 0 0 10px;
+    border-width: 0;
+    font-size: 14px;
+  }
+}
+
+.support-link {
+  cursor: pointer;
+  color: $primary;
+  @include font-size-md();
+  @include font-medium();
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus {
+    border: 2px solid $focus-border;
+    border-radius: 4px;
+    text-decoration: underline;
+    color: $primary;
+  }
+
+  &:active {
+    color: mix($black, $primary, 10%);
+    text-decoration: underline;
+  }
+}
+
+.review-column {
+  flex-grow: 1;
+  @include media-breakpoint-sm {
+    margin-top: 4rem;
+  }
+  .dropdown {
+    margin-right: 5rem;
+  }
+}
+
+.close-icon {
+  width: 16px;
+  height: 16px;
+  background-color: $secondary;
+  -webkit-mask: url('../../../../../public/assets/img/close-icon.svg') no-repeat center;
+  mask: url('../../../../../public/assets/img/close-icon.svg') no-repeat center;
+}
+
+.actions-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: block;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  max-width: 160px;
+  @include media-breakpoint-md {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.container_custom {
+  @include media-breakpoint-md {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.dropdown-button__menu {
+  width: initial;
+}
+
+.review-list__one-review {
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    .dropdown-item {
+      padding: 14px 42px !important;
+    }
+  }
+  &-heading {
+    font-weight: 500;
+    font-style: bold;
+    line-height: 5rem;
+    font-size: 20px;
+  }
+}

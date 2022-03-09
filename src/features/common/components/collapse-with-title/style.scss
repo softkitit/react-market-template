@@ -1,0 +1,12 @@
+@import '/src/styles.scss';
+@import '/src/theme.scss';
+@import '/src/assets/styles/mixins';
+
+.filters-collapse {
+  align-items: center;
+  outline: none;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

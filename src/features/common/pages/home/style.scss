@@ -1,0 +1,84 @@
+@import 'src/theme';
+
+.page-info {
+  margin: 4rem 0;
+}
+.oc-sidebar__list {
+  margin-top: 3rem;
+}
+.gallery__more {
+  margin-bottom: -1rem;
+}
+#root > div.container > div > div.col-md-9.col-xxxl-10 > div:not(:first-child) > div > div.gallery__header > div > h4 {
+  margin-top: 1rem;
+}
+.get-started__info-heading {
+  font-size: 32px;
+}
+.bottom-info {
+  padding-bottom: 1rem;
+}
+
+.section-wrapper {
+  margin-bottom: 6rem;
+  .gallery__heading {
+    margin-bottom: 0;
+  }
+  & + .section-wrapper {
+    @include media-breakpoint-md {
+      display: block;
+      margin-top: 4rem;
+    }
+  }
+}
+
+.footer > .container {
+  padding: 48px 0 24px;
+}
+
+.filter__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.featured-apps-container {
+  @include media-breakpoint-md {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+// Media Query - max-width: 767px Start
+
+@media (max-width: 767px) {
+  .page-title {
+    font-size: 24px;
+  }
+
+  .page-description {
+    font-size: 14px;
+  }
+
+  .page-info {
+    margin: 3rem 0;
+  }
+
+  .featured .sec-space {
+    padding: 25px 0 0 0 !important;
+  }
+
+  .featured .item-title,
+  .item-description {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+h1 {
+  font-size: 38px;
+}
+
+.text-search {
+  margin-bottom: 3rem !important;
+}
